@@ -56,8 +56,8 @@ class CustomDataset(Dataset):
         return self.lqTransform(lqImg), self.hqTransform(hqImg)
 
 # Create DataLoader
-highquality_folder = r"C:\Users\ashut\Documents\GitHub\2dshapedetection-major\ElementaryCQT_200x200"
-lowquality_folder = r"C:\Users\ashut\Documents\GitHub\2dshapedetection-major\ElementaryCQT_100x100"
+highquality_folder = r"C:\Users\ashut\Desktop\2dShapeDetection_Folders\ElementaryCQT_200x200"
+lowquality_folder = r"C:\Users\ashut\Desktop\2dShapeDetection_Folders\ElementaryCQT_100x100"
 trainDataset = CustomDataset(highquality_folder, lowquality_folder)  
 trainLoader = DataLoader(trainDataset, batch_size=16, shuffle=True)
 
